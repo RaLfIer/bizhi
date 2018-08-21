@@ -108,7 +108,6 @@ def main(offset):
     for url in parse_url_list(html):
         details = get_one_detail(url)
         for item in parse_detail_downurl(details):
-            #down_url(item)
             data = down_url(item)
             save_to_mongo(data)
 

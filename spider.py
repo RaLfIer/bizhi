@@ -57,7 +57,7 @@ def down_url(url):
         'Accept-Encoding': 'gzip, deflate',
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Connection': 'keep-alive',
-        'Cookie': 'ip_ck=1I2t1I+yv8EuMDAxMTM4LjE1MjYwMTY2MzE%3D; gr_user_id=b7cb853b-f464-4d8a-963a-4206324efaa9; BDTUJIAID=30d8dd56e6057f674addec6d812c0cb4; z_pro_city=s_provice%3Djuyuwang%26s_city%3Dnull; userProvinceId=1; userCityId=0; userLocationId=1; vjuids=334da4b4b.16545ca76b9.0.2409f62a24506; vjlast=1534474221.1534474221.30; z_day=izol102715%3D10%26izol102591%3D10%26izol102612%3D10%26izol102569%3D10%26ixgo20%3D1; Hm_lvt_ae5edc2bc4fc71370807f6187f0a2dd0=1532395707,1533520394,1534148960,1534476503; lv=1534489949; vn=15; afpCT=1; ecaaedbddccbe3bbddbb7a09beef3e3c=31o4u6h1u41s3amg%7B%7BZ%7D%7D%25E4%25B8%258B%25E8%25BD%25BD%25E5%25A3%2581%25E7%25BA%25B8%7B%7BZ%7D%7Dnull; MyZClick_ecaaedbddccbe3bbddbb7a09beef3e3c=/html/body/div%5B4%5D/ul/li%5B3%5D/a/; Adshow=4; Hm_lpvt_ae5edc2bc4fc71370807f6187f0a2dd0=1534493615; questionnaire_pv=1534464096; 99cd60e1415abb11414c07f08ef299ab=2fk4u6h1u34k39lg%7B%7BZ%7D%7D%25E4%25B8%258B%25E8%25BD%25BD%25E5%25A3%2581%25E7%25BA%25B8%7B%7BZ%7D%7Dnull; 3e9d46f7388b2f408b80f362cccd910a=2fk4u6h1u34k39lg%7B%7BZ%7D%7D%25E4%25B8%258B%25E8%25BD%25BD%25E5%25A3%2581%25E7%25BA%25B8%7B%7BZ%7D%7Dnull; MyZClick_99cd60e1415abb11414c07f08ef299ab=/html/body/div%5B4%5D/ul/li%5B3%5D/a/; MyZClick_3e9d46f7388b2f408b80f362cccd910a=/html/body/div%5B4%5D/ul/li%5B3%5D/a/',
+        'Cookie': '你的cookise!',
         'Host': 'desk.zol.com.cn',
         'Referer': 'http://desk.zol.com.cn/bizhi/7301_90293_2.html',
         'Upgrade-Insecure-Requests': '1',

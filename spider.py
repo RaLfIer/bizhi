@@ -4,6 +4,13 @@ from requests.exceptions import RequestException
 from hashlib import md5
 import os
 from multiprocessing import Pool
+from config import *
+from pymongo import MongoClient
+
+
+client = MongoClient(MONGO_URL,connect=False)
+db = client[MONGO_DB]
+
 
 def get_one_page(offset):
     url = 'http://desk.zol.com.cn/fengjing/'+str(offset)+'.html'
@@ -69,11 +76,15 @@ def down_url(url):
         response = requests.get(url,headers=headers)
     except RequestException:
         print('状态码出错:',response.status_code)
-    print('download...',response.url)
+
     if response.url:
         try:
             res_pic = requests.get(response.url)
+            print('download...', response.url)
             save_pic(res_pic.content)
+            yield {
+                'url':response.url
+            }
         except RequestException:
             print('请求图片下载地址出错', url)
             return None
@@ -85,15 +96,27 @@ def save_pic(content):
             f.write(content)
             f.close()
 
+def save_to_mongo(data):
+    if db[MONGO_TABLE].insert(data):
+        print('Successfully Saved to MongoDB',data)
+        return True
+    return False
+
+
 def main(offset):
     html = get_one_page(offset)
     for url in parse_url_list(html):
         details = get_one_detail(url)
         for item in parse_detail_downurl(details):
-            down_url(item)
+            #down_url(item)
+            data = down_url(item)
+            save_to_mongo(data)
+
 
 
 
 if __name__ == '__main__':
     pool = Pool()
-    pool.map(main,[i for i in range(1)])
+    pool.map(main,[i for i in range(int(OFFSET))])
+    pool.close()
+    pool.join()
